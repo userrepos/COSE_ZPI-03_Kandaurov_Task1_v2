@@ -7,7 +7,7 @@ using namespace std;
 
 double factorial(double n);
 double xRad(double x);
-double cosX(int accuracy, double xRad);
+double cosaX(int accuracy, double xRad);
 int func(char c);
 int cti(string str);
 
@@ -22,7 +22,7 @@ int main(int argc, char **argv) {
 
 	cout << "\n\tcos(" << fixed << angle;
 	cout.precision(40);
-	cout << ") = " << cosX(accuracy, xRad(angle)) << endl; 
+	cout << ") = " << cosaX(accuracy, xRad(angle)) << endl; 
 	printf("\tAccuracy:%d\n", accuracy);
 	return 0;
 }
@@ -31,7 +31,7 @@ double xRad(double x) {
 	return 	(x * M_PI / 180);
 }
 
-double cosX(int accuracy, double xRad) {
+double cosaX(int accuracy, double xRad) {
 	double cosx = 1;
 	for(int i = 0, n = 2; i < accuracy; i++, n+=2) {
 	  cosx -= pow(xRad, n) / factorial(n) * pow(-1, i);
