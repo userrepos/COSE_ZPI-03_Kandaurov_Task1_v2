@@ -17,7 +17,7 @@ int main(int argc, char **argv) {
 
 	if(argv[1]) accuracy = cti(argv[1]);
     else {
-        accuracy = 4; 
+        cin >> accuracy; 
     }
 
 	cout << "\n\tcos(" << fixed << angle;
